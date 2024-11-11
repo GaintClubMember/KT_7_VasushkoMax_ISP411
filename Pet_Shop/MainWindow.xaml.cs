@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -26,10 +27,22 @@ namespace Pet_Shop
 
             try
             {
-                Classes.Manager.FrameManager = frameContainer;
-                Classes.Manager.FrameManager.Navigate(new Pages./*right page here*/()) 
+                initFrame();
             }
             catch(Exception ex)
+            {
+                return;
+            }
+        }
+
+        private void initFrame()
+        {
+            try
+            {
+                Classes.Manager.FrameManager = frameContainer;
+                Classes.Manager.FrameManager.Navigate(new Pages./*right page here*/());
+            }
+            catch (Exception ex)
             {
                 return;
             }
