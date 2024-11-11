@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d3a65326ee1646e3805edc833d7c3ca4" Name="Diagram1">
+        <EntityTypeShape EntityType="KT_7_MasterPoModel.AdressCity" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="KT_7_MasterPoModel.AdressIndex" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="KT_7_MasterPoModel.AdressRegion" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KT_7_MasterPoModel.AdressStreet" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KT_7_MasterPoModel.CompanyName" Width="1.5" PointX="0.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KT_7_MasterPoModel.CompanyType" Width="1.5" PointX="0.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KT_7_MasterPoModel.MaterialType" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KT_7_MasterPoModel.Orders" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KT_7_MasterPoModel.Partner" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KT_7_MasterPoModel.Product" Width="1.5" PointX="3" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KT_7_MasterPoModel.ProductName" Width="1.5" PointX="0.75" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="KT_7_MasterPoModel.ProductType" Width="1.5" PointX="0.75" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="KT_7_MasterPoModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="KT_7_MasterPoModel.FK_Partner_AdressCity" ManuallyRouted="false" />
+        <AssociationConnector Association="KT_7_MasterPoModel.FK_Partner_AdressIndex" ManuallyRouted="false" />
+        <AssociationConnector Association="KT_7_MasterPoModel.FK_Partner_AdressRegion" ManuallyRouted="false" />
+        <AssociationConnector Association="KT_7_MasterPoModel.FK_Partner_AdressStreet" ManuallyRouted="false" />
+        <AssociationConnector Association="KT_7_MasterPoModel.FK_Partner_CompanyName" ManuallyRouted="false" />
+        <AssociationConnector Association="KT_7_MasterPoModel.FK_Partner_CompanyType" ManuallyRouted="false" />
+        <AssociationConnector Association="KT_7_MasterPoModel.FK_Orders_Partner" ManuallyRouted="false" />
+        <AssociationConnector Association="KT_7_MasterPoModel.FK_Orders_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="KT_7_MasterPoModel.FK_Product_ProductName" ManuallyRouted="false" />
+        <AssociationConnector Association="KT_7_MasterPoModel.FK_Product_ProductType" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
