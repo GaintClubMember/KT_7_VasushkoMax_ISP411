@@ -23,6 +23,16 @@ namespace Pet_Shop
         public MainWindow()
         {
             InitializeComponent();
+
+            try
+            {
+                Classes.Manager.FrameManager = frameContainer;
+                Classes.Manager.FrameManager.Navigate(new Pages./*right page here*/()) 
+            }
+            catch(Exception ex)
+            {
+                return;
+            }
         }
     }
 }
