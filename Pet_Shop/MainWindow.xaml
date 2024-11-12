@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pet_Shop"
         mc:Ignorable="d"
+        Icon="Resources/Мастер пол.ico"
         Title="MainWindow" Height="600" Width="900"
         MinHeight="600" MinWidth="900">
     <Grid>
@@ -16,12 +17,25 @@
 
         <Grid x:Name="labelGrid"
               Grid.Row="0">
+
+            <StackPanel Orientation="Horizontal" 
+                        HorizontalAlignment="Center">
+                <Image x:Name="imageContainer" 
+                        Source="/Resources/Мастер Пол.png" 
+                        VerticalAlignment="Center"></Image>
+                <TextBlock x:Name="appNameBlock" 
+                        Text="Мастер Пол" 
+                        VerticalAlignment="Center" 
+                        FontSize="35" 
+                        Margin="20,0,0,0"></TextBlock>
+            </StackPanel>
             
         </Grid>
 
         <Grid x:Name="frameGrid"
               Grid.Row="1">
-            <Frame x:Name="frameContainer"></Frame>
+            <Frame x:Name="frameContainer"
+                   NavigationUIVisibility="Hidden"></Frame>
         </Grid>
 
     </Grid>

@@ -40,7 +40,7 @@ namespace Pet_Shop
             try
             {
                 Classes.Manager.FrameManager = frameContainer;
-                Classes.Manager.FrameManager.Navigate(new Pages./*right page here*/());
+                Classes.Manager.FrameManager.Navigate(new Views.MainViewPage());
             }
             catch (Exception ex)
             {
