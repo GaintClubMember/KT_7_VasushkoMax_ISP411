@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:Pet_Shop"
         mc:Ignorable="d"
         Icon="Resources/Мастер пол.ico"
-        Title="MainWindow" Height="600" Width="900"
-        MinHeight="600" MinWidth="900">
+        Title="{Binding ElementName=frameContainer, Path=Content.Title}" Height="650" Width="900"
+        MinHeight="650" MinWidth="900">
     <Grid>
 
         <Grid.RowDefinitions>
@@ -26,7 +26,8 @@
                 <TextBlock x:Name="appNameBlock" 
                         Text="Мастер Пол" 
                         VerticalAlignment="Center" 
-                        FontSize="35" 
+                        FontSize="35"
+                           Height="50"
                         Margin="20,0,0,0"></TextBlock>
             </StackPanel>
             

@@ -55,7 +55,19 @@ namespace Pet_Shop.Views
             try
             {
                 //Classes.Manager.FrameManager.Navigate(new Views.AddOrEditPage(sender as Button DataContext = new Data.Partner));
-                Classes.Manager.FrameManager.Navigate(new Views.AddOrEditPage()); // datacontext sender needed
+                Classes.Manager.FrameManager.Navigate(new Views.AddOrEditPage(null)); // datacontext sender needed
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
+        }
+
+        private void addBtn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Classes.Manager.FrameManager.Navigate(new Views.AddOrEditPage(null));
             }
             catch (Exception ex)
             {

@@ -25,7 +25,8 @@
                    Grid.ColumnSpan="2" 
                    HorizontalAlignment="Center" 
                    VerticalAlignment="Center"
-                   FontSize="27"></TextBlock>
+                   FontSize="27"
+                   Height="40"></TextBlock>
 
         <Grid Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right">
             <StackPanel x:Name="namesForTextBoxesPanel">
@@ -40,9 +41,9 @@
 
         <Grid Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left">
             <StackPanel x:Name="textBoxesPanel">
-                <ComboBox x:Name="typeCombo" Text="Тип компании:" Height="27"></ComboBox>
-                <TextBox x:Name="compnayNameBox" Text="Название компании:"></TextBox>
-                <TextBox x:Name="fioBox" Text="ФИО:"></TextBox>
+                <ComboBox x:Name="typeCombo" DisplayMemberPath="name" SelectedValuePath="id" Text="Тип компании:" Height="27"></ComboBox>
+                <TextBox x:Name="companyNameBox" Text="Название компании:"></TextBox>
+                <TextBox x:Name="fioBox" Text="Фамилия Имя Отчество"></TextBox>
                 <TextBox x:Name="emailBox" Text="Email:"></TextBox>
                 <TextBox x:Name="phoneBox" Text="Телефон:"></TextBox>
                 <TextBox x:Name="ratingBox" Text="Рейтинг:"></TextBox>

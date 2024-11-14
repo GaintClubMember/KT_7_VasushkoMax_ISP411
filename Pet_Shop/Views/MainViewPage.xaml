@@ -9,10 +9,16 @@
         MinHeight="500" MinWidth="900">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        
         <ListView x:Name="listViewContainer" 
                   HorizontalAlignment="Center" 
                   Width="900" 
-                  Height="500">
+                  Height="500"
+                  Grid.Row="0">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -75,7 +81,13 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
+
+        <Button x:Name="addBtn"
+                Grid.Row="1"
+                Click="addBtn_Click"
+                Content="Добавить"
+                Width="130"
+                HorizontalAlignment="Center" VerticalAlignment="Center" Height="45"></Button>        
     </Grid>
 </Page>
  
