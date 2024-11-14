@@ -26,12 +26,15 @@ namespace Pet_Shop.Views
         public string flag = "default";
 
         Data.Partner _partner = new Data.Partner();
+        Data.Partner _partnerData;
 
         public AddOrEditPage(Data.Partner partner)
         {
             InitializeComponent();
             try
             {
+                DataContext = partner;
+                _partnerData = partner;
                 _partner = partner;
                 loadComboBox();
                 if (_partner == null)
@@ -41,6 +44,7 @@ namespace Pet_Shop.Views
                 if (_partner != null)
                 {
                     flag = "edit";
+                    fillFromPartner();
                 }
             }
             catch (Exception ex)
@@ -86,7 +90,6 @@ namespace Pet_Shop.Views
                     }
                     else
                     {
-                        // fill blank newPartner and .Add(newPartner) and .SaveChanges()
                         string[] fioParts = fioBox.Text.Split(' ');
 
                         newPartner.lastname = fioParts[0];
@@ -100,13 +103,14 @@ namespace Pet_Shop.Views
                         {
                             Data.MasterPol_Entities.GetContext().CompanyName.Add(newNameCompany);
                             Data.MasterPol_Entities.GetContext().SaveChanges();
+                            newPartner.companyName = newNameCompany.id;
                         }
                         else
                         {
                             newPartner.companyName = newNameCompany.id;
                         }
 
-                        newPartner.companyType = typeCombo.SelectedIndex - 1;
+                        newPartner.companyType = typeCombo.SelectedIndex + 1;
                         newPartner.phone = phoneBox.Text;
                         newPartner.email = emailBox.Text;
                         newPartner.rating = Convert.ToInt32(ratingBox.Text);
@@ -127,16 +131,58 @@ namespace Pet_Shop.Views
                     }
                     else
                     {
-                        // fill partner and .SaveChanges()
+                        string[] fioParts = fioBox.Text.Split(' ');
+
+                        _partnerData.lastname = fioParts[0];
+                        _partnerData.name = fioParts[1];
+                        _partnerData.surname = fioParts[2];
+
+                        Data.CompanyName newNameCompany = new Data.CompanyName();
+                        newNameCompany.name = companyNameBox.Text;
+                        bool isCompanyNameExists = Data.MasterPol_Entities.GetContext().CompanyName.Any(d => d.name == companyNameBox.Text);
+                        if (isCompanyNameExists == false)
+                        {
+                            Data.MasterPol_Entities.GetContext().CompanyName.Add(newNameCompany);
+                            Data.MasterPol_Entities.GetContext().SaveChanges();
+                            _partnerData.companyName = newNameCompany.id;
+                        }
+                        else
+                        {
+                            _partnerData.companyName = newNameCompany.id;
+                        }
+
+                        _partnerData.companyType = typeCombo.SelectedIndex + 1;
+                        _partnerData.phone = phoneBox.Text;
+                        _partnerData.email = emailBox.Text;
+                        _partnerData.rating = Convert.ToInt32(ratingBox.Text);
+
                         MessageBox.Show($"Партнер был успешно Изменен", "Успешно!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
 
-                        Data.MasterPol_Entities.GetContext().SaveChanges();
 
                         Classes.Manager.FrameManager.Navigate(new Views.MainViewPage());
                     }
                 }
             }
             catch (Exception ex)
+            {
+                return;
+            }
+        }
+
+        private void fillFromPartner()
+        {
+            try
+            {
+                string fioForBox = _partner.lastname + " " + _partner.name + " " + _partner.surname;
+                fioBox.Text = fioForBox;
+                companyNameBox.Text = _partner.CompanyName1.name.ToString();
+                typeCombo.SelectedIndex = _partner.companyType - 1;
+                emailBox.Text = _partner.email.ToString();
+                phoneBox.Text = _partner.phone.ToString();
+                ratingBox.Text = _partner.rating.ToString();
+
+            }
+            catch(Exception ex)
             {
                 return;
             }

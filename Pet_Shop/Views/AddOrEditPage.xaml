@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Pet_Shop.Views"
       mc:Ignorable="d" 
       d:DesignHeight="500" d:DesignWidth="900"
-      Title="AddOrEditPage">
+      Title="Мастер пол - Добавление/Редактирование партнеров">
 
     <Grid>
         <Grid.RowDefinitions>

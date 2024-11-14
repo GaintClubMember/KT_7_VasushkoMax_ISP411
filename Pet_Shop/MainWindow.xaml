@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Icon="Resources/Мастер пол.ico"
         Title="{Binding ElementName=frameContainer, Path=Content.Title}" Height="650" Width="900"
-        MinHeight="650" MinWidth="900">
+        MinHeight="650" MinWidth="900"
+        Background="#F4E8D3">
     <Grid>
 
         <Grid.RowDefinitions>
@@ -17,7 +18,7 @@
 
         <Grid x:Name="labelGrid"
               Grid.Row="0">
-
+              
             <StackPanel Orientation="Horizontal" 
                         HorizontalAlignment="Center">
                 <Image x:Name="imageContainer" 
@@ -36,7 +37,7 @@
         <Grid x:Name="frameGrid"
               Grid.Row="1">
             <Frame x:Name="frameContainer"
-                   NavigationUIVisibility="Hidden"></Frame>
+                   NavigationUIVisibility="Hidden" Background="#FFFFFF"></Frame>
         </Grid>
 
     </Grid>

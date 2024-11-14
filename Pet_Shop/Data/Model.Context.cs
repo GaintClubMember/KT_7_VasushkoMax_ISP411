@@ -16,7 +16,7 @@ namespace Pet_Shop.Data
     public partial class MasterPol_Entities : DbContext
     {
 
-        private static MasterPol_Entities _context = new MasterPol_Entities();
+        private static MasterPol_Entities _context;
         public static MasterPol_Entities GetContext()
         {
             if (_context == null)
@@ -25,8 +25,6 @@ namespace Pet_Shop.Data
             }
             return _context;
         }
-
-
         public MasterPol_Entities()
             : base("name=MasterPol_Entities")
         {

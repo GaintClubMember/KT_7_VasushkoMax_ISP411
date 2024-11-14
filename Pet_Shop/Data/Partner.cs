@@ -28,11 +28,11 @@ namespace Pet_Shop.Data
         public string surname { get; set; }
         public string email { get; set; }
         public string phone { get; set; }
-        public int index { get; set; }
-        public int region { get; set; }
-        public int city { get; set; }
-        public int street { get; set; }
-        public int building { get; set; }
+        public Nullable<int> index { get; set; }
+        public Nullable<int> region { get; set; }
+        public Nullable<int> city { get; set; }
+        public Nullable<int> street { get; set; }
+        public Nullable<int> building { get; set; }
         public string inn { get; set; }
         public int rating { get; set; }
     

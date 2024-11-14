@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d3a65326ee1646e3805edc833d7c3ca4" Name="Diagram1">
+      <Diagram DiagramId="c04974d1efbe48f1874e893287e413b7" Name="Diagram1">
         <EntityTypeShape EntityType="KT_7_MasterPoModel.AdressCity" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
         <EntityTypeShape EntityType="KT_7_MasterPoModel.AdressIndex" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
         <EntityTypeShape EntityType="KT_7_MasterPoModel.AdressRegion" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />

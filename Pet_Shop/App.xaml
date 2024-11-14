@@ -23,5 +23,9 @@
             <Setter Property="FontSize" Value="20"></Setter>
         </Style>
 
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#67BA80"></Setter>
+        </Style>
+
     </Application.Resources>
 </Application>

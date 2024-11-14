@@ -77,12 +77,12 @@
           <Property Name="surname" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="email" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="phone" Type="nvarchar" MaxLength="11" Nullable="false" />
-          <Property Name="index" Type="int" Nullable="false" />
-          <Property Name="region" Type="int" Nullable="false" />
-          <Property Name="city" Type="int" Nullable="false" />
-          <Property Name="street" Type="int" Nullable="false" />
-          <Property Name="building" Type="int" Nullable="false" />
-          <Property Name="inn" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="index" Type="int" />
+          <Property Name="region" Type="int" />
+          <Property Name="city" Type="int" />
+          <Property Name="street" Type="int" />
+          <Property Name="building" Type="int" />
+          <Property Name="inn" Type="nvarchar" MaxLength="50" />
           <Property Name="rating" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Product">
@@ -145,7 +145,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Partner_AdressCity">
-          <End Role="AdressCity" Type="Self.AdressCity" Multiplicity="1" />
+          <End Role="AdressCity" Type="Self.AdressCity" Multiplicity="0..1" />
           <End Role="Partner" Type="Self.Partner" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="AdressCity">
@@ -157,7 +157,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Partner_AdressIndex">
-          <End Role="AdressIndex" Type="Self.AdressIndex" Multiplicity="1" />
+          <End Role="AdressIndex" Type="Self.AdressIndex" Multiplicity="0..1" />
           <End Role="Partner" Type="Self.Partner" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="AdressIndex">
@@ -169,7 +169,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Partner_AdressRegion">
-          <End Role="AdressRegion" Type="Self.AdressRegion" Multiplicity="1" />
+          <End Role="AdressRegion" Type="Self.AdressRegion" Multiplicity="0..1" />
           <End Role="Partner" Type="Self.Partner" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="AdressRegion">
@@ -181,7 +181,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Partner_AdressStreet">
-          <End Role="AdressStreet" Type="Self.AdressStreet" Multiplicity="1" />
+          <End Role="AdressStreet" Type="Self.AdressStreet" Multiplicity="0..1" />
           <End Role="Partner" Type="Self.Partner" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="AdressStreet">
@@ -380,12 +380,12 @@
           <Property Name="surname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="phone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="index" Type="Int32" Nullable="false" />
-          <Property Name="region" Type="Int32" Nullable="false" />
-          <Property Name="city" Type="Int32" Nullable="false" />
-          <Property Name="street" Type="Int32" Nullable="false" />
-          <Property Name="building" Type="Int32" Nullable="false" />
-          <Property Name="inn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="index" Type="Int32" />
+          <Property Name="region" Type="Int32" />
+          <Property Name="city" Type="Int32" />
+          <Property Name="street" Type="Int32" />
+          <Property Name="building" Type="Int32" />
+          <Property Name="inn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="rating" Type="Int32" Nullable="false" />
           <NavigationProperty Name="AdressCity" Relationship="Self.FK_Partner_AdressCity" FromRole="Partner" ToRole="AdressCity" />
           <NavigationProperty Name="AdressIndex" Relationship="Self.FK_Partner_AdressIndex" FromRole="Partner" ToRole="AdressIndex" />
@@ -436,7 +436,7 @@
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <Association Name="FK_Partner_AdressCity">
-          <End Role="AdressCity" Type="Self.AdressCity" Multiplicity="1" />
+          <End Role="AdressCity" Type="Self.AdressCity" Multiplicity="0..1" />
           <End Role="Partner" Type="Self.Partner" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="AdressCity">
@@ -448,7 +448,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Partner_AdressIndex">
-          <End Role="AdressIndex" Type="Self.AdressIndex" Multiplicity="1" />
+          <End Role="AdressIndex" Type="Self.AdressIndex" Multiplicity="0..1" />
           <End Role="Partner" Type="Self.Partner" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="AdressIndex">
@@ -460,7 +460,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Partner_AdressRegion">
-          <End Role="AdressRegion" Type="Self.AdressRegion" Multiplicity="1" />
+          <End Role="AdressRegion" Type="Self.AdressRegion" Multiplicity="0..1" />
           <End Role="Partner" Type="Self.Partner" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="AdressRegion">
@@ -472,7 +472,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Partner_AdressStreet">
-          <End Role="AdressStreet" Type="Self.AdressStreet" Multiplicity="1" />
+          <End Role="AdressStreet" Type="Self.AdressStreet" Multiplicity="0..1" />
           <End Role="Partner" Type="Self.Partner" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="AdressStreet">

@@ -6,9 +6,21 @@
       xmlns:local="clr-namespace:Pet_Shop.Views"
       mc:Ignorable="d" 
       d:DesignHeight="500" d:DesignWidth="800"
-      Title="HistoryPage">
+      Title="Мастер пол - Просмотр истории заказов партнера">
 
     <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
         
+        <DataGrid x:Name="dataGrid" Grid.Row="0">
+            <DataGrid.Columns>
+                
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button x:Name="backBtn" Click="backBtn_Click" Content="Назад" Width="120" Height="45" Grid.Row="1"></Button>
     </Grid>
 </Page>

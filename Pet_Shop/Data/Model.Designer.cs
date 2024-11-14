@@ -1,4 +1,4 @@
-﻿// Создание кода T4 для модели "C:\Users\User\source\repos\Pet_Shop\Pet_Shop\Data\Model.edmx" включено. 
+﻿// Создание кода T4 для модели "C:\Users\User\Source\Repos\KT_7_VasushkoMax_ISP411_Clone2\Pet_Shop\Data\Model.edmx" включено. 
 // Чтобы включить формирование кода прежних версий, измените значение свойства "Стратегия создания кода" конструктора
 // на "Legacy ObjectContext". Это свойство доступно в окне "Свойства", если модель
 // открыта в конструкторе.

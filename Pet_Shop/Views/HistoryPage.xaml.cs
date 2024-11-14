@@ -20,9 +20,44 @@ namespace Pet_Shop.Views
     /// </summary>
     public partial class HistoryPage : Page
     {
-        public HistoryPage()
+        public Data.Partner _partner;
+        public HistoryPage(Data.Partner partnerData)
         {
             InitializeComponent();
+
+            try
+            {
+                _partner = partnerData;
+                loadDataGrid();
+            }
+            catch(Exception ex)
+            {
+                return;
+            }
+        }
+
+        private void loadDataGrid()
+        {
+            try
+            {
+                dataGrid.ItemsSource = Data.MasterPol_Entities.GetContext().Orders.Where(d => d.partnerId == _partner.id).ToList();
+            }
+            catch(Exception ex)
+            {
+                return;
+            }
+        }
+
+        private void backBtn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Classes.Manager.FrameManager.Navigate(new Views.MainViewPage());
+            }
+            catch(Exception ex)
+            {
+                return;
+            }
         }
     }
 }

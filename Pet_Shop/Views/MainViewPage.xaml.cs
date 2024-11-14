@@ -35,14 +35,21 @@ namespace Pet_Shop.Views
 
         private void loadListView()
         {
-            listViewContainer.ItemsSource = Data.MasterPol_Entities.GetContext().Partner.ToList();
+            try
+            {
+                listViewContainer.ItemsSource = Data.MasterPol_Entities.GetContext().Partner.ToList();
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
         }
 
         private void historyBtn_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                Classes.Manager.FrameManager.Navigate(new Views.HistoryPage()); // datacontext sender needed
+                Classes.Manager.FrameManager.Navigate(new Views.HistoryPage((sender as Button).DataContext as Data.Partner)); // datacontext sender needed
             }
             catch(Exception ex)
             {
@@ -55,7 +62,7 @@ namespace Pet_Shop.Views
             try
             {
                 //Classes.Manager.FrameManager.Navigate(new Views.AddOrEditPage(sender as Button DataContext = new Data.Partner));
-                Classes.Manager.FrameManager.Navigate(new Views.AddOrEditPage(null)); // datacontext sender needed
+                Classes.Manager.FrameManager.Navigate(new Views.AddOrEditPage((sender as Button).DataContext as Data.Partner)); // datacontext sender needed
             }
             catch (Exception ex)
             {

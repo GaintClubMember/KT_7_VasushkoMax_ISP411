@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Pet_Shop.Views"
       mc:Ignorable="d" 
-      Title="MainViewPage" Height="500" Width="900"
+      Title="Мастер пол - Просмотр партнеров" Height="500" Width="900"
         MinHeight="500" MinWidth="900">
 
     <Grid>
@@ -32,11 +32,11 @@
 
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock x:Name="typeBlock" 
-                                           Text="{Binding companyType}"></TextBlock>
+                                           Text="{Binding CompanyType1.name}"></TextBlock>
                                 <TextBlock Text="|"
                                            Margin="5,0,0,0"></TextBlock>
                                 <TextBlock x:Name="companyNameBlock" 
-                                           Text="{Binding companyName}"
+                                           Text="{Binding CompanyName1.name}"
                                             Margin="5,0,0,0"></TextBlock>
                             </StackPanel>
 
